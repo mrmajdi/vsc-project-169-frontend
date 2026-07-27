@@ -1,0 +1,32 @@
+// @vsc repo:vsc-project-169-frontend file:src/styles/globals.css task:f2-src-styles-globals-css module:frontend session:169
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Vazir Font – Regular weight */
+  @font-face {
+    font-family: 'Vazir';
+    src:
+      url('/fonts/Vazir-Regular.woff2') format('woff2'),
+      url('/fonts/Vazir-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Base HTML – RTL direction & typography */
+  html {
+    direction: rtl;
+    font-family:
+      'Vazir',
+      system-ui,
+      sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  /* Body – background & text from design tokens */
+  body {
+    @apply bg-background text-text-primary antialiased;
+  }
+}
